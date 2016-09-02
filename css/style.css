@@ -1,22 +1,75 @@
+@font-face {
+font-family: missionscript;
+src: url("missionscript/missionscript.otf") format("opentype");
+}
+
+
 body{
 	margin:0;
 }
 
 .steps{
-	width:100%;
-	height:100%;
-	position:absolute;
+	width:110%;
+	height:110%;
+	position:fixed;
+	/*position:absolute;*/
 	top:0;
-	left: 0;
-	transition:transform 300ms ease-out;
+	left:-5%;
+	padding:5%;
+	-webkit-transition:all 300ms ease-out;
+	-moz-transition:all 300ms ease-out;
+	-o-transition:all 300ms ease-out;
+	transition:all 300ms ease-out;
+	box-shadow:5px 5px 10px rgba(0,0,0,0.2);
+}
+.stop-scrolling{
+  height: 100%;
+  overflow: hidden;
+}
+/*----------- Step 1 -----------*/
+#step1{
+	/*display:none;*/
+	background:#FEA680;
+}
+#header{
+	margin-top:40px;
+}
+#header h1{
+	color:#fefefe;
+	font-size:110px;
+	font-family:missionscript;
+	text-align:center;
+	text-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
 
-#step1{
-	background:#dedede;
+#users{
+	text-align:center;
+}
+.user_buttons{
+	font-weight:600;
+	background:#fefefe;
+	width:100px;
+	height:100px;
+	border:5px solid #fefefe;
+	border-radius:50%;
+	margin:10px auto;
+	box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	font-size:30px;
+	padding-top:24px;
+	color:#FEA680;
+	-webkit-transition:background 250ms, color 250ms;
+	-moz-transition:background 250ms, color 250ms;
+	-o-transition:background 250ms, color 250ms;
+	transition:background 250ms, color 250ms;
+}
+
+.user_buttons:hover{
+	color:#fefefe;
+	background:#FEA680;
 }
 
 #step2{
-	background:#ababab;	
+	background:#fefefe;	
 }
 
 #step3{
