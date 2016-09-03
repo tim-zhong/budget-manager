@@ -7,7 +7,6 @@ src: url("missionscript/missionscript.otf") format("opentype");
 body{
 	margin:0;
 }
-
 .steps{
 	width:110%;
 	height:110%;
@@ -25,6 +24,57 @@ body{
 .stop-scrolling{
   height: 100%;
   overflow: hidden;
+}
+
+.cwidth{
+	position: relative;
+	width:800px;
+	margin:0 auto;
+}
+
+#nav_bar{
+	z-index: 2;
+	position:fixed;
+	width:100%;
+	top:0;
+	left:0;
+	padding:10px 5px;
+	border-bottom: #dedede;
+	box-shadow:0px 2px 5px rgba(0,0,0,0.3);
+	background: #fefefe;
+	-webkit-transition:all 200ms ease-out;
+	-moz-transition:all 200ms ease-out;
+	-o-transition:all 200ms ease-out;
+	transition:all 200ms ease-out;
+}
+.nav_bar_hide{
+	-webkit-transform: translateY(-110%);
+	-moz-transform: translateY(-110%);
+	-ms-transform: translateY(-110%);
+	-o-transform: translateY(-110%);
+	transform: translateY(-110%);
+}
+.nav_bar_show{
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+#nav_button{
+	font-size:30px;
+	padding: 5px;
+	color:#FEA680;
+}
+
+#nav_logo{
+	font-family: missionscript;
+	color:#FEA680;
+	font-size:35px;
+	position: absolute;
+	top:2px;
+	right: 24px;
+	padding: 5px;
 }
 /*----------- Step 1 -----------*/
 #step1{
@@ -46,14 +96,14 @@ body{
 	text-align:center;
 }
 .user_buttons{
-	font-weight:600;
+	font-weight:300;
 	background:#fefefe;
 	width:100px;
 	height:100px;
 	border:5px solid #fefefe;
 	border-radius:50%;
 	margin:10px auto;
-	box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	box-shadow:0px 2px 5px rgba(0,0,0,0.2);
 	font-size:30px;
 	padding-top:24px;
 	color:#FEA680;
@@ -68,10 +118,86 @@ body{
 	background:#FEA680;
 }
 
+/*----------- Step 2 -----------*/
 #step2{
-	background:#fefefe;	
+	padding: 0;
+	background: #fefefe;
+}
+#user_summary{
+	background: #FEA680;
+	padding:92px 30px 20px;
+	color:#555555;
+	text-align: center;
+	box-shadow:0px -2px 5px rgba(0,0,0,0.2) inset;
+}
+#greeting{
+	font-style: italic;
+	font-size:20px;
+	font-weight: 300;
+}
+#user_summary_amount{
+	font-size:50px;
+}
+#cats{
+	position: relative;
+}
+.cat{
+	width:50%;
+	float:left;
+	text-align: center;
+	color:#555555;
+	padding: 25px 0;
+	border-bottom: 1px solid #efefef;
+	font-size:20px;
+	font-weight: 300;
+}
+.cat:hover{
+	color:#FEA680;
+}
+.cat:nth-child(5){
+	border-bottom: none;
+}
+.cat:nth-child(6){
+	border-bottom: none;
+}
+.cat_name{
+	font-size:16px;
 }
 
+
+/*----------- Step 3 -----------*/
 #step3{
-	
+	padding-top:160px;
+	background: #fefefe;
+}
+.input-group-addon{
+	color:#FEA680;
+	background: #fefefe;
+}
+#description{
+	margin-top:30px;
+	resize: none;
+	color:#FEA680;
+}
+#amount{
+	color:#FEA680;
+	text-align: right;
+}
+#submit{
+	margin:20px auto;
+	width:50%;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size:18px;
+	border:1px solid #dedede;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+	color:#FEA680;
+}
+
+
+@media screen and (max-width: 800px){
+	.cwidth{
+		width: 90%;
+	}
 }
